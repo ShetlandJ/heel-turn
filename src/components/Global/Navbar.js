@@ -14,6 +14,7 @@ export default function Navbar() {
 
   const links = linkData.map((link) => (
     <NavLink
+      key={link.to}
       activeClassName="active"
       to={link.to}
       isActive={(match, location) => location.pathname === link.to}
