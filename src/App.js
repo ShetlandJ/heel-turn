@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Route path="/about" component={About} />
-      <Route exact path="/" component={Home} />
+      <Route path="/about" name="about" component={About} />
+      <Route exact name="home" path="/" component={Home} />
     </div>
   );
 }
