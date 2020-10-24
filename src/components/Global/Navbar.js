@@ -1,20 +1,41 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+
+  const linkData = [
+    { to: '/', text: 'Home' },
+    { to: '/about', text: 'About' },
+    { to: '/test', text: 'Test' },
+  ];
+
+  const links = linkData.map((link) => (
+    <NavLink
+      key={link.to}
+      activeClassName="active"
+      to={link.to}
+      isActive={(match, location) => location.pathname === link.to}
+      className="mb-2 lg:mb-0"
+    >
+      <span className="lg:ml-2">
+        {link.text}
+      </span>
+    </NavLink>
+  ));
+
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-pink-500 mb-3">
+      <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-black mb-3">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <a
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
-              href="#pablo"
-            >
-              pink Tailwind Starter Kit
-            </a>
+
+            <h3 className="text-white">
+              The Heel Book
+            </h3>
+
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
@@ -25,40 +46,40 @@ export default function Navbar() {
           </div>
           <div
             className={
-                            `lg:flex flex-grow items-center${
-                              navbarOpen ? ' flex' : ' hidden'}`
-                        }
-            id="example-navbar-danger"
+              `lg:flex flex-grow ${
+                navbarOpen ? ' flex' : ' hidden'}`
+            }
           >
-            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-facebook-square text-lg leading-lg text-white opacity-75" />
-                  <span className="ml-2">Share</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-twitter text-lg leading-lg text-white opacity-75" />
-                  <span className="ml-2">Tweet</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                  href="#pablo"
-                >
-                  <i className="fab fa-pinterest text-lg leading-lg text-white opacity-75" />
-                  <span className="ml-2">Pin</span>
-                </a>
-              </li>
-            </ul>
+            <div className="flex w-full text-white flex-col lg:flex-row list-none lg:ml-auto lg:justify-end">
+              {/* <NavLink
+                activeClassName="active"
+                to="/"
+                isActive={(match, location) => location.pathname === '/'}
+                className="mb-2 lg:mb-0"
+
+              >
+                Home
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/about"
+                isActive={(match, location) => location.pathname === '/about'}
+                className="mb-2 lg:mb-0"
+              >
+                <span className="lg:ml-2">About</span>
+
+              </NavLink>
+              <NavLink
+                activeClassName="active"
+                to="/test"
+                isActive={(match, location) => location.pathname === '/test'}
+                className="mb-2 lg:mb-0"
+              >
+                <span className="lg:ml-2">Test</span>
+
+              </NavLink> */}
+              {links}
+            </div>
           </div>
         </div>
       </nav>
