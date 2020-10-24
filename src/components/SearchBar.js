@@ -7,8 +7,14 @@ const options = [
   { value: 'the-rock', label: 'The Rock' },
 ];
 
-const SearchBar = () => (
-  <Select className="w-1/2" options={options} />
+const handleSelect = (value, props) => props.select(value);
+
+const SearchBar = (props) => (
+  <Select
+    className="w-1/2"
+    onChange={(value) => handleSelect(value, props)}
+    options={options}
+  />
 );
 
 export default SearchBar;

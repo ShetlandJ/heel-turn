@@ -2,6 +2,10 @@ import React from 'react';
 import SearchBar from '../components/SearchBar';
 
 function Home() {
+  const selectWrestler = (value) => {
+    console.log(value);
+  };
+
   return (
     <div>
       <div>
@@ -15,7 +19,9 @@ function Home() {
       </div>
 
       <div className="flex h-auto flex-grow justify-center">
-        <SearchBar />
+        <SearchBar
+          select={selectWrestler}
+        />
       </div>
     </div>
   );
