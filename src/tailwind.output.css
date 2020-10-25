@@ -10514,11 +10514,15 @@ video {
 }
 
 .text-xs {
-  font-size: 0.75rem !important;
+  font-size: .75rem !important;
 }
 
 .text-sm {
-  font-size: 0.875rem !important;
+  font-size: .875rem !important;
+}
+
+.text-tiny {
+  font-size: .875rem !important;
 }
 
 .text-base {
@@ -10551,6 +10555,10 @@ video {
 
 .text-6xl {
   font-size: 4rem !important;
+}
+
+.text-7xl {
+  font-size: 5rem !important;
 }
 
 .leading-3 {
@@ -32709,11 +32717,15 @@ video {
   }
 
   .sm\:text-xs {
-    font-size: 0.75rem !important;
+    font-size: .75rem !important;
   }
 
   .sm\:text-sm {
-    font-size: 0.875rem !important;
+    font-size: .875rem !important;
+  }
+
+  .sm\:text-tiny {
+    font-size: .875rem !important;
   }
 
   .sm\:text-base {
@@ -32746,6 +32758,10 @@ video {
 
   .sm\:text-6xl {
     font-size: 4rem !important;
+  }
+
+  .sm\:text-7xl {
+    font-size: 5rem !important;
   }
 
   .sm\:leading-3 {
@@ -54839,11 +54855,15 @@ video {
   }
 
   .md\:text-xs {
-    font-size: 0.75rem !important;
+    font-size: .75rem !important;
   }
 
   .md\:text-sm {
-    font-size: 0.875rem !important;
+    font-size: .875rem !important;
+  }
+
+  .md\:text-tiny {
+    font-size: .875rem !important;
   }
 
   .md\:text-base {
@@ -54876,6 +54896,10 @@ video {
 
   .md\:text-6xl {
     font-size: 4rem !important;
+  }
+
+  .md\:text-7xl {
+    font-size: 5rem !important;
   }
 
   .md\:leading-3 {
@@ -76969,11 +76993,15 @@ video {
   }
 
   .lg\:text-xs {
-    font-size: 0.75rem !important;
+    font-size: .75rem !important;
   }
 
   .lg\:text-sm {
-    font-size: 0.875rem !important;
+    font-size: .875rem !important;
+  }
+
+  .lg\:text-tiny {
+    font-size: .875rem !important;
   }
 
   .lg\:text-base {
@@ -77006,6 +77034,10 @@ video {
 
   .lg\:text-6xl {
     font-size: 4rem !important;
+  }
+
+  .lg\:text-7xl {
+    font-size: 5rem !important;
   }
 
   .lg\:leading-3 {
@@ -99099,11 +99131,15 @@ video {
   }
 
   .xl\:text-xs {
-    font-size: 0.75rem !important;
+    font-size: .75rem !important;
   }
 
   .xl\:text-sm {
-    font-size: 0.875rem !important;
+    font-size: .875rem !important;
+  }
+
+  .xl\:text-tiny {
+    font-size: .875rem !important;
   }
 
   .xl\:text-base {
@@ -99136,6 +99172,10 @@ video {
 
   .xl\:text-6xl {
     font-size: 4rem !important;
+  }
+
+  .xl\:text-7xl {
+    font-size: 5rem !important;
   }
 
   .xl\:leading-3 {
