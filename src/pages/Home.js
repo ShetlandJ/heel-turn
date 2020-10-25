@@ -13,7 +13,6 @@ class Home extends React.Component {
 
   selectWrestler = ({ value }) => {
     // Go make the data call to get the data from the wrestler
-
     const response = value;
 
     this.setState({
